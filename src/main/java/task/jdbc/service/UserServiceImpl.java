@@ -8,23 +8,23 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    UserDao users = new UserDaoJDBCImpl();
+    UserDao userDao = new UserDaoJDBCImpl();
     public void createUsersTable() {
-        users.createUsersTable();
+        userDao.createUsersTable();
     }
     public void dropUsersTable() {
-        users.dropUsersTable();
+        userDao.dropUsersTable();
     }
     public void saveUser(String name, String lastName, byte age) {
-        users.saveUser(name, lastName, age);
+        userDao.saveUser(name, lastName, age);
     }
     public void removeUserById(long id) {
-        users.removeUserById(id);
+        userDao.removeUserById(id);
     }
     public List<User> getAllUsers() throws SQLException {
-        return users.getAllUsers();
+        return userDao.getAllUsers();
     }
     public void cleanUsersTable() {
-        users.cleanUsersTable();
+        userDao.cleanUsersTable();
     }
 }

@@ -2,7 +2,6 @@ package task.jdbc;
 
 import task.jdbc.service.UserService;
 import task.jdbc.service.UserServiceImpl;
-
 import java.sql.SQLException;
 
 public class Main {
